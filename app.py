@@ -9,7 +9,7 @@ def static_files(filename):
 
 @app.route('/download-resume')
 def download_resume():
-    return send_from_directory(os.path.join(app.root_path, 'static'), 'resume.pdf', as_attachment=True)
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'Dhanush_Kumar_Reddy_Yarragonda_resume.pdf', as_attachment=True)
 
 # Main page
 @app.route('/')
