@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f5f7fa;
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            position: relative;
+        }
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .section-container {
+            max-width: 700px;
+            margin: 120px auto 0 auto;
+            background: rgba(255,255,255,0.92);
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(44,62,80,0.07);
+            padding: 48px 36px;
+            text-align: center;
+        }
+        h1 {
+            color: #3498db;
+            font-size: 2.2rem;
+            margin-bottom: 28px;
+            letter-spacing: 1px;
+        }
+        .about-paragraph {
+            font-size: 1.13rem;
+            line-height: 1.8;
+            margin-bottom: 28px;
+            text-align: justify;
+        }
+        .btn-back {
+            display: inline-block;
+            margin-top: 32px;
+            padding: 10px 22px;
+            background: #3498db;
+            color: #fff;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .btn-back:hover {
+            background: #2c3e50;
+        }
+        .close-icon {
+            position: fixed;
+            top: 32px;
+            right: 48px;
+            z-index: 10;
+            font-size: 2.1rem;
+            color: #e74c3c;
+            background: rgba(255,255,255,0.96);
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            transition: background 0.2s, color 0.2s;
+        }
+        .close-icon:hover {
+            background: #e74c3c;
+            color: #fff;
+        }
+        @media (max-width: 800px) {
+            .section-container {
+                padding: 24px 8vw;
+                margin: 80px 8vw 0 8vw;
+            }
+            .close-icon {
+                right: 16px;
+                top: 16px;
+                font-size: 1.7rem;
+                width: 38px;
+                height: 38px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Video -->
+    <video class="video-background" autoplay loop muted playsinline>
+        <source src="{{ url_for('static', filename='videos/aboutme.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Close (cross) icon -->
+    <div class="close-icon" onclick="window.location.href='/'" title="Close & Go Home">
+        <i class="fas fa-times"></i>
+    </div>
+
+    <div class="section-container">
+        <h1>About</h1>
+        <p class="about-paragraph">
+            I am Dhanush Kumar Reddy Yarragonda, a passionate and adaptive software developer with a strong foundation in Python programming, DevOps practices, and hands-on experience with cloud platforms such as AWS, Azure, and GCP. I specialize in developing efficient backend systems, automating workflows, and deploying scalable cloud-native applications.
+        </p>
+        <p class="about-paragraph">
+            My academic background in Computer Science and Electronics, combined with my constant pursuit of learning, has allowed me to bridge the gap between software development and infrastructure. I aim to contribute to impactful projects that solve real-world problems using clean code, robust architecture, and modern DevOps practices. I enjoy working in collaborative environments and thrive in challenging technical domains.
+        </p>
+        <a href="/" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    </div>
+</body>
+</html>

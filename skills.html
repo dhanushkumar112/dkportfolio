@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skills | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f5f7fa;
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            position: relative;
+        }
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .section-container {
+            max-width: 700px;
+            margin: 120px auto 0 auto;
+            background: rgba(255,255,255,0.92);
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(44,62,80,0.07);
+            padding: 48px 36px;
+            text-align: left;
+        }
+        h1 {
+            color: #3498db;
+            font-size: 2.2rem;
+            margin-bottom: 32px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        .skills-group {
+            margin-bottom: 30px;
+        }
+        .skills-title {
+            font-size: 1.13rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+        .skill-pill {
+            background: #eaf6fd;
+            color: #3498db;
+            padding: 7px 16px;
+            border-radius: 20px;
+            font-size: 0.98rem;
+            box-shadow: 0 2px 5px rgba(52,152,219,0.07);
+        }
+        .btn-back {
+            display: inline-block;
+            margin-top: 32px;
+            padding: 10px 22px;
+            background: #3498db;
+            color: #fff;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s;
+            text-align: center;
+        }
+        .btn-back:hover {
+            background: #2c3e50;
+        }
+        .close-icon {
+            position: fixed;
+            top: 32px;
+            right: 48px;
+            z-index: 10;
+            font-size: 2.1rem;
+            color: #e74c3c;
+            background: rgba(255,255,255,0.96);
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            transition: background 0.2s, color 0.2s;
+        }
+        .close-icon:hover {
+            background: #e74c3c;
+            color: #fff;
+        }
+        @media (max-width: 800px) {
+            .section-container {
+                padding: 24px 8vw;
+                margin: 80px 8vw 0 8vw;
+            }
+            .close-icon {
+                right: 16px;
+                top: 16px;
+                font-size: 1.7rem;
+                width: 38px;
+                height: 38px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Video -->
+    <video class="video-background" autoplay loop muted playsinline>
+        <source src="{{ url_for('static', filename='videos/skills.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Close (cross) icon -->
+    <div class="close-icon" onclick="window.location.href='/'" title="Close & Go Home">
+        <i class="fas fa-times"></i>
+    </div>
+
+    <div class="section-container">
+        <h1>Skills</h1>
+        <div class="skills-group">
+            <div class="skills-title"><i class="fas fa-code"></i> Languages</div>
+            <div class="skills-list">
+                <span class="skill-pill">Python</span>
+                <span class="skill-pill">Shell Scripting</span>
+                <span class="skill-pill">SQL</span>
+                <span class="skill-pill">YAML</span>
+                <span class="skill-pill">HTML</span>
+            </div>
+        </div>
+        <div class="skills-group">
+            <div class="skills-title"><i class="fas fa-tools"></i> Developer Tools</div>
+            <div class="skills-list">
+                <span class="skill-pill">Git</span>
+                <span class="skill-pill">GitHub</span>
+                <span class="skill-pill">GitHub Actions</span>
+                <span class="skill-pill">Visual Studio Code</span>
+                <span class="skill-pill">Android Studio</span>
+                <span class="skill-pill">Eclipse</span>
+                <span class="skill-pill">Postman</span>
+                <span class="skill-pill">Git Bash</span>
+                <span class="skill-pill">Docker CLI</span>
+            </div>
+        </div>
+        <div class="skills-group">
+            <div class="skills-title"><i class="fas fa-cubes"></i> Technologies & Frameworks</div>
+            <div class="skills-list">
+                <span class="skill-pill">Flask</span>
+                <span class="skill-pill">Django (Basic)</span>
+                <span class="skill-pill">Docker</span>
+                <span class="skill-pill">Kubernetes (Basic)</span>
+                <span class="skill-pill">Jenkins (Basic)</span>
+                <span class="skill-pill">Terraform</span>
+                <span class="skill-pill">Ansible (Basic)</span>
+            </div>
+        </div>
+        <div class="skills-group">
+            <div class="skills-title"><i class="fas fa-cloud"></i> Cloud Platforms</div>
+            <div class="skills-list">
+                <span class="skill-pill">Amazon Web Services (AWS)</span>
+                <span class="skill-pill">Microsoft Azure</span>
+                <span class="skill-pill">Google Cloud Platform (GCP)</span>
+            </div>
+        </div>
+        <a href="/" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    </div>
+</body>
+</html>
