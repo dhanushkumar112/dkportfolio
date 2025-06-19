@@ -63,7 +63,7 @@ def home():
         ],
         "experience": [
             {
-                "company": "SIRI SOLUTIONS INC",
+                "company": "SEER SOLUTIONS INC",
                 "position": "SOFTWARE DEVELOPER",
                 "details": [
                     "Designed and deployed scalable backend modules using Python on cloud-hosted servers (AWS EC2).",
